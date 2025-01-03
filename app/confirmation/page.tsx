@@ -17,11 +17,11 @@ export default function ConfirmationPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <Suspense fallback={<div>Loading confirmation details...</div>}>
+    <Suspense fallback={<div>Loading confirmation details...</div>}>
+      <div className="container mx-auto px-4 py-16">
         <ThankYouMessage name={bookingDetails.name} />
         <BookingSummary booking={bookingDetails} />
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }

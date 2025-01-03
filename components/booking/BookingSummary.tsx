@@ -1,21 +1,21 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { format } from 'date-fns';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { format } from "date-fns";
 
 interface BookingSummaryProps {
   booking: {
-    name: string | null;
-    date: string | null;
-    time: string | null;
-    guests: string | null;
-    email: string | null;
-    phone: string | null;
+    name?: string | null;
+    date?: string | null;
+    time?: string | null;
+    guests?: string | null;
+    email?: string | null;
+    phone?: string | null;
   };
 }
 
 export function BookingSummary({ booking }: BookingSummaryProps) {
-  const formattedDate = booking.date 
-    ? format(new Date(booking.date), 'MMMM d, yyyy')
-    : '';
+  const formattedDate = booking.date
+    ? format(new Date(booking.date), "MMMM d, yyyy")
+    : "";
 
   return (
     <Card className="mt-8">
